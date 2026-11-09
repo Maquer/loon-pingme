@@ -8,5 +8,5 @@
 hostname = api.pingmeapp.net
 
 [Script]
-cron "30 8,20 * * *" script-url=https://cdn.jsdelivr.net/gh/Maquer/loon-pingme@main/PingMe.loon.js, tag=PingMe签到
-http-request ^https://api\.pingmeapp\.net/app/queryBalanceAndBonus script-url=https://cdn.jsdelivr.net/gh/Maquer/loon-pingme@main/PingMe.loon.js, tag=PingMe抓包
+cron "30 8,20 * * *" script-url=https://fastly.jsdelivr.net/gh/Maquer/loon-pingme@main/PingMe.loon.js, tag=PingMe签到
+http-request ^https://api\.pingmeapp\.net/app/queryBalanceAndBonus script-url=https://fastly.jsdelivr.net/gh/Maquer/loon-pingme@main/PingMe.loon.js, tag=PingMe抓包
