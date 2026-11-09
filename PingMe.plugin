@@ -1,0 +1,12 @@
+#!name = PingMe 签到
+#!desc = PingMe 自动化签到+视频奖励（多账号），每天 8:20/20:20 自动跑。首次需打开 PingMe App 触发一次抓包入库。
+#!author = 小蒋
+#!homepage = https://github.com/Maquer/loon-pingme
+#!icon = https://api.pingmeapp.net/favicon.ico
+
+[MITM]
+hostname = api.pingmeapp.net
+
+[Script]
+cron "30 8,20 * * *" script-url=https://cdn.jsdelivr.net/gh/Maquer/loon-pingme@main/PingMe.loon.js, tag=PingMe签到
+http-request ^https://api\.pingmeapp\.net/app/queryBalanceAndBonus script-url=https://cdn.jsdelivr.net/gh/Maquer/loon-pingme@main/PingMe.loon.js, tag=PingMe抓包
